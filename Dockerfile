@@ -7,8 +7,7 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
 # RUN mkdir -p $RAILS_ROOT
 # # Set working directory
 # WORKDIR $RAILS_ROOT
-COPY package*.json ./
-RUN yarn install
+
 # Adding gems
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
