@@ -61,7 +61,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # config.action_cable.url = "/cable" 
   # config.action_cable.allowed_request_origins = ["http://action-cable.panhara.work"]
-  config.action_cable.url = 'ws://action-cable.panhara.work/cable'
-  config.action_cable.allowed_request_origins = ['http://action-cable.panhara.work']
+  # config.action_cable.url = 'ws://action-cable.panhara.work/cable'
+  # config.action_cable.allowed_request_origins = ['http://action-cable.panhara.work']
   puts "Development"
 end
