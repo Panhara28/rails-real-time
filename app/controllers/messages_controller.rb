@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
   def create
     message = Message.new(message_params)
     if message.save
+      Redis.new(:password=>"010718") 
       ActionCable.server.broadcast 'messages',
         message: message.content
       head :ok
