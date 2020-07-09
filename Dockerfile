@@ -17,7 +17,11 @@ FROM node:10
 COPY package*.json ./
 RUN yarn install
 # Adding project files
+# Copying source files
 COPY . .
+
+# Building app
+RUN yarn build
 # RUN bundle exec rake db:seed
 EXPOSE 80
 CMD ["rackup","config.ru", "--host", "0.0.0.0", "--port", "80"]
