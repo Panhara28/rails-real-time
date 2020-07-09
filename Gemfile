@@ -14,7 +14,6 @@ gem 'paperclip'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
-
 gem 'ckeditor', github: 'galetahub/ckeditor'
 
 gem 'simple_form'
