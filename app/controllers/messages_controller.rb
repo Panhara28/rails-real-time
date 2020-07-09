@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
     if message.save
       ActionCable.server.broadcast 'messages',
         message: message.content
-      head :ok
+      head 200
     end
   end
 
