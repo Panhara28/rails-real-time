@@ -12,7 +12,8 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN gem install bundler:2.0.2
 RUN bundle install --jobs 20 --retry 5 --without development test
-
+COPY package*.json ./
+RUN yarn install
 # Adding project files
 COPY . .
 # RUN bundle exec rake db:seed
