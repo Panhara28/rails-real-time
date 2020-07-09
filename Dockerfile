@@ -12,6 +12,8 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN gem install bundler:2.0.2
 RUN bundle install --jobs 20 --retry 5 --without development test
+
+FROM node:10
 COPY package*.json ./
 RUN yarn install
 # Adding project files
